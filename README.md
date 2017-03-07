@@ -81,7 +81,7 @@ Here are a number of links that you might find useful.
 
 * [Ember.js](http://emberjs.com/)
 * [Ember-cli](https://ember-cli.com/)
-* [ember-cli-rails](https://github.com/thoughtbot/ember-cli-rails)
+* [Github ember-cli-rails](https://github.com/thoughtbot/ember-cli-rails)
 * [Using Rails for API-only Applications](http://edgeguides.rubyonrails.org/api_app.html)
 * [Sass](http://sass-lang.com/)
 * [Bootstrap v4 alpha](https://v4-alpha.getbootstrap.com/)
