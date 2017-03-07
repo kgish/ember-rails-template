@@ -28,6 +28,7 @@ Add the following line to the `Gemfile`:
 gem 'ember-cli-rails'
 ```
 
+Create and setup the ember front end.
 
 ```
 $ ember new frontend —skip-git
