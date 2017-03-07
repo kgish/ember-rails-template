@@ -38,11 +38,12 @@ $ rails generate ember:init
 $ cd frontend
 ```
 
-Install Sass and Bootstrap.
+Install Sass, Bootstrap and Font Awesome.
 
 ```
 $ ember install ember-cli-sass
-$ bower install bootstrap#4.0.0-alpha.6
+$ bower install bootstrap#4.0.0-alpha.6 --save
+$ bower install fontawesome --save
 ```
 
 Convert the default Ember stylesheet CSS to SASS:
@@ -51,11 +52,22 @@ Convert the default Ember stylesheet CSS to SASS:
 $ mv app/styles/app.css app/styles/app.scss
 ```
 
-Include bootstrap in the `app.scss` file:
+Include bootstrap and fontawesome in the `app.scss` file:
 
 ```scss
 @import "../../bower_components/bootstrap/scss/bootstrap";
+@import "../../bower_components/font-awesome/scss/font-awesome";
 ```
+
+Add the following lines to the `ember-cli-build.js` file:
+
+```
+app.import('bower_components/tether/dist/js/tether.min.js');
+app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
+
+```
+
+Important: make sure that `tether` import goes before the `bootstrap` import.
 
 Finally, modify the `ember-rails-template/config/routes.rb` file to look like this:
 
@@ -72,8 +84,15 @@ Now you're all set to go. Start the server
 $ bin/rails server
 ```
 
-and point your favorite browser to [http://localhost:3000](http://localhost:3000).
+and then cross your fingers and point your favorite browser to [http://localhost:3000](http://localhost:3000).
 
+Once you are convinced that everything is working, you can remove the default `ember-welcome-page` addon, and then modify the `templates/application.hbs` file by removing `{{welcome-page}}` and embellishing the template with your own idiosyncrasies.
+.
+
+```
+$ npm uninstall ember-welcome-page --save-dev
+
+```
 
 ## References
 
@@ -85,6 +104,7 @@ Here are a number of links that you might find useful.
 * [Using Rails for API-only Applications](http://edgeguides.rubyonrails.org/api_app.html)
 * [Sass](http://sass-lang.com/)
 * [Bootstrap v4 alpha](https://v4-alpha.getbootstrap.com/)
+* [Font awesome](http://fontawesome.io/icons/)
 
 
 ## Author

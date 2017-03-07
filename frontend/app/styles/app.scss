@@ -1,1 +1,13 @@
 @import "../../bower_components/bootstrap/scss/bootstrap";
+
+body {
+  background: #ddd;
+  padding-top: 5rem;
+}
+
+.main-wrapper {
+  background: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35)
+}
