@@ -2,9 +2,9 @@
 
 This is a bare-bones template that you can use as a starting point for building impressive ember-rails applications.
 
-We combine the power of the Rails backend with the flexibility of an Ember client interface.
+Using this approach, you can easily ombine the power of the Rails backend with the flexibility of an Ember client interface.
 
-Special credit goes to the article [Getting Started with Rails and Ember CLI](https://spin.atomicobject.com/2017/03/06/rails-ember-cli) which inspired me to create this.
+Special credit goes to the article [Getting Started with Rails and Ember CLI](https://spin.atomicobject.com/2017/03/06/rails-ember-cli) by Laura Robb which inspired me to create this.
 
 For convenience I take the liberty to repeat the most important points below.
 
