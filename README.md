@@ -6,6 +6,8 @@ Using this approach, you can easily ombine the power of the Rails backend with t
 
 Special credit goes to the article [Getting Started with Rails and Ember CLI](https://spin.atomicobject.com/2017/03/06/rails-ember-cli) by Laura Robb which inspired me to create this.
 
+In addition to this article, I've also extended the template to use [Sass](http://sass-lang.com/) and [Bootstrap v4 alpha](https://v4-alpha.getbootstrap.com/).
+
 For convenience I take the liberty to repeat the most important points below.
 
 
@@ -34,7 +36,11 @@ Create and setup the ember front end.
 $ ember new frontend —skip-git
 $ rails generate ember:init
 $ cd frontend
-$ ember install ember-cli-rails-addon
+```
+
+```
+$ ember install ember-cli-sass
+$ bower install bootstrap#4.0.0-alpha.6
 ```
 
 Finally, modify the `ember-rails-template/config/routes.rb` file to look like this:
@@ -63,6 +69,8 @@ Here are a number of links that you might find useful.
 * [Ember-cli](https://ember-cli.com/)
 * [ember-cli-rails](https://github.com/thoughtbot/ember-cli-rails)
 * [Using Rails for API-only Applications](http://edgeguides.rubyonrails.org/api_app.html)
+* [Sass](http://sass-lang.com/)
+* [Bootstrap v4 alpha](https://v4-alpha.getbootstrap.com/)
 
 
 ## Author
