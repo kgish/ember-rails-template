@@ -1,14 +1,10 @@
 # Ember-rails template
 
-This is a bare-bones template that you can use as a starting point for building impressive ember-rails applications.
+This is a bare-bones template that you can use as a starting point for building your impressive ember-rails applications.
 
-Using this approach, you can easily ombine the power of the Rails backend with the flexibility of an Ember client interface.
+Using this approach as a generic basis, you can easily combine the power of the Rails backend with the flexibility of an Ember client interface.
 
-Special credit goes to the article [Getting Started with Rails and Ember CLI](https://spin.atomicobject.com/2017/03/06/rails-ember-cli) by Laura Robb which inspired me to create this.
-
-In addition to this article, I've also extended the template to use [Sass](http://sass-lang.com/) and [Bootstrap v4 alpha](https://v4-alpha.getbootstrap.com/).
-
-For convenience I take the liberty to repeat the most important points below.
+I've also extended the template to use [Sass](http://sass-lang.com/) and [Bootstrap v4 alpha](https://v4-alpha.getbootstrap.com/), but this can be left out if you prefer.
 
 
 ## Installation
@@ -67,7 +63,7 @@ app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
 
 ```
 
-Important: make sure that `tether` import goes before the `bootstrap` import.
+IMPORTANT: make sure that `tether` import goes BEFORE the `bootstrap` import.
 
 Finally, modify the `ember-rails-template/config/routes.rb` file to look like this:
 
@@ -78,35 +74,43 @@ end
 
 ```
 
-Now you're all set to go. Start the server
+Now you're all set to go. Start the server:
 
 ```
 $ bin/rails server
 ```
 
-and then cross your fingers and point your favorite browser to [http://localhost:3000](http://localhost:3000).
+Then cross your fingers and point your favorite browser to [http://localhost:3000](http://localhost:3000).
 
-Once you are convinced that everything is working, you can remove the default `ember-welcome-page` addon,
-.
+Once you are convinced that everything is working according to expectations, you can remove the default `ember-welcome-page` addon:
 
 ```
 $ npm uninstall ember-welcome-page --save-dev
 
 ```
 
-and then modify the `templates/application.hbs` file by removing `{{welcome-page}}` and embellishing the template with your own idiosyncrasies.
+and then modify the `templates/application.hbs` file by removing `{{welcome-page}}` and embellishing it with your own idiosyncrasies.
 
 ```
 <div class="container">
 
     <div class="main-wrapper">
+
         <h1>Ember Rails Bootstrap starter template</h1>
+
         <p class="lead">Use this document as a way to quickly start any new project.<br> Have fun and enjoy being a creative web developer.</p>
+
         {{outlet}}
+
     </div>
 
 </div>
 ```
+
+
+## Credits
+
+Special credit goes to the article [Getting Started with Rails and Ember CLI](https://spin.atomicobject.com/2017/03/06/rails-ember-cli) by Laura Robb which inspired me to create this.
 
 
 ## References
