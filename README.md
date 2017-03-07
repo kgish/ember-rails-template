@@ -38,9 +38,23 @@ $ rails generate ember:init
 $ cd frontend
 ```
 
+Install Sass and Bootstrap.
+
 ```
 $ ember install ember-cli-sass
 $ bower install bootstrap#4.0.0-alpha.6
+```
+
+Convert the default Ember stylesheet CSS to SASS:
+
+```
+$ mv app/styles/app.css app/styles/app.scss
+```
+
+Include bootstrap in the `app.scss` file:
+
+```scss
+@import "../../bower_components/bootstrap/scss/bootstrap";
 ```
 
 Finally, modify the `ember-rails-template/config/routes.rb` file to look like this:
