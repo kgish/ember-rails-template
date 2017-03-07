@@ -18,13 +18,14 @@ Install the new Rails application as usual. Since you will be using Ember for th
 ```
 $ rails new ember-rails-template -d postgresql --api
 $ cd ember-rails-template
+$ bundle install
 $ rails db:create
 ```
 
 Add the following line to the `Gemfile`:
 
 ```
-gem “ember-cli-rails”
+gem 'ember-cli-rails'
 ```
 
 
