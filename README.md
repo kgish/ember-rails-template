@@ -52,7 +52,7 @@ Now you're all set to go. Start the server
 $ bin/rails server
 ```
 
-and point your favorite browser to http://localhost:3000.
+and point your favorite browser to [http://localhost:3000](http://localhost:3000).
 
 
 ## References
