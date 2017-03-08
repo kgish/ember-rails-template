@@ -11,7 +11,7 @@ I've also extended the template to use [Sass](http://sass-lang.com/) and [Bootst
 
 The steps needed for a successful installation are easy, just follow these instructions.
 
-### Rails API backend
+### Rails API back-end
 
 Install the new Rails application as usual. Since you will be using Ember for the front end, use the `--api` option for creating an API-only application.
 
@@ -59,9 +59,9 @@ end
 
 ```
 
-### Ember frontend
+### Ember front-end
 
-Create and setup the ember front end as follows.
+Create and setup the ember front-end as follows.
 
 ```
 $ ember new frontend —skip-git
@@ -140,7 +140,7 @@ Now you're all set to go. Start the server:
 $ bin/rails server
 ```
 
-Then cross your fingers and point your favorite browser to [http://localhost:3000](http://localhost:3000).
+Then cross your fingers and point your favorite browser to [http://localhost:3000](http://localhost:3000). Voilà, mon ami.
 
 ### Cleanup and final polish
 
