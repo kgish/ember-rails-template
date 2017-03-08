@@ -1,5 +1,10 @@
 @import "../../bower_components/bootstrap/scss/bootstrap";
 
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
 body {
   background: #ddd;
   padding-top: 5rem;

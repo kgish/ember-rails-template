@@ -19,6 +19,6 @@ insert_final_newline = false
 [*.{diff,md}]
 trim_trailing_whitespace = false
 
-[*.{js,hbs}]
+[*.{js,hbs,html}]
 indent_style = space
 indent_size = 4
