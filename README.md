@@ -134,7 +134,7 @@ module.exports = function(environment) {
 
 ### Start the application
 
-Now you're all set to go. Start the server:
+Now you're all set to go, simply fire up the server by executing the following command:
 
 ```
 $ bin/rails server
@@ -169,13 +169,36 @@ and then modify the `templates/application.hbs` file by removing `{{welcome-page
 </div>
 ```
 
+## JSON-API
+
+```
+ember install ember-cli-scaffold
+```
+
+```
+$ ember g model user firstname:string lastname:string email:string details:string
+```
+
+```
+$ ember generate adapter application
+```
+
+Add a namespace to `app/adapters/application.js` so that it looks like this:
+
+```
+import DS from 'ember-data';
+
+export default DS.JSONAPIAdapter.extend({
+    namespace: 'api'
+});
+```
 
 ## Credits
 
 Special credit goes to the article [Getting Started with Rails and Ember CLI](https://spin.atomicobject.com/2017/03/06/rails-ember-cli) by Laura Robb which triggered me to create this.
 
-I was also inspired by the Tuts+ course [Create a Full-Stack Rails and Ember App](https://code.tutsplus.com/courses/create-a-full-stack-rails-and-ember-app)
-by Gunther Mühlberger.
+I was also inspired by the Tuts+ courses [Create a Full-Stack Rails and Ember App](https://code.tutsplus.com/courses/create-a-full-stack-rails-and-ember-app)
+by Gunther Mühlberger and [Build an Ambitious App with Ember 2](https://code.tutsplus.com/courses/build-an-ambitious-app-with-ember-2)
 
 ## References
 
