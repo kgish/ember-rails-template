@@ -198,6 +198,23 @@ To configure it, enter this line of code in `config/environments/development.rb`
 ```
 ActiveModelSerializers.config.adapter = :json_api
 ```
+
+Add the following lines to `mime_types.rb`:
+
+```
+api_mime_types = %W(
+  application/vnd.api+json
+  text/x-json
+  application/json
+)
+Mime::Type.register 'application/vnd.api+json', :json, api_mime_types
+```
+
+```
+gem 'jsonapi-resources'
+```
+
+
 ## Credits
 
 Special credit goes to the article [Getting Started with Rails and Ember CLI](https://spin.atomicobject.com/2017/03/06/rails-ember-cli) by Laura Robb which triggered me to create this.
