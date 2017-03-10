@@ -39,4 +39,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # We want to use the JSON-API specifications
+  ActiveModelSerializers.config.adapter = :json_api
 end

@@ -193,6 +193,11 @@ export default DS.JSONAPIAdapter.extend({
 });
 ```
 
+To configure it, enter this line of code in `config/environments/development.rb`, `config/environments/test.rb` and `config/environments/production.rb`:
+
+```
+ActiveModelSerializers.config.adapter = :json_api
+```
 ## Credits
 
 Special credit goes to the article [Getting Started with Rails and Ember CLI](https://spin.atomicobject.com/2017/03/06/rails-ember-cli) by Laura Robb which triggered me to create this.
@@ -211,6 +216,11 @@ Here are a number of links that you might find useful.
 * [Sass](http://sass-lang.com/)
 * [Bootstrap v4 alpha](https://v4-alpha.getbootstrap.com/)
 * [Font awesome](http://fontawesome.io/icons/)
+* [Ember-cli-rails](https://github.com/thoughtbot/ember-cli-rails)
+
+Some good articles about implementing the JSON:API
+
+* [How and why should you use JSON API in your Rails API?](http://blog.arkency.com/2016/02/how-and-why-should-you-use-json-api-in-your-rails-api/)
 
 
 ## Author
