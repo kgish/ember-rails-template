@@ -4,10 +4,14 @@ one:
   firstname: MyString
   lastname: MyString
   email: MyString
-  details: MyText
+  password_digest: MyString
+  token: MyString
+  description: MyText
 
 two:
   firstname: MyString
   lastname: MyString
   email: MyString
-  details: MyText
+  password_digest: MyString
+  token: MyString
+  description: MyText

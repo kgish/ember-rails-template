@@ -210,8 +210,22 @@ api_mime_types = %W(
 Mime::Type.register 'application/vnd.api+json', :json, api_mime_types
 ```
 
+Gemfile:
+
 ```
-gem 'jsonapi-resources'
+gem 'bcrypt', '~> 3.1.7'
+```
+
+Users:
+
+```
+$ rails g scaffold users firstname:string lastname:string email:string password_digest:string token:string description:text
+```
+
+Notes:
+
+```
+$ rails g scaffold notes title:string contents:text user:references
 ```
 
 
@@ -235,9 +249,10 @@ Here are a number of links that you might find useful.
 * [Font awesome](http://fontawesome.io/icons/)
 * [Ember-cli-rails](https://github.com/thoughtbot/ember-cli-rails)
 
-Some good articles about implementing the JSON:API
+Some good articles about implementing the JSON:API can be found here:
 
 * [How and why should you use JSON API in your Rails API?](http://blog.arkency.com/2016/02/how-and-why-should-you-use-json-api-in-your-rails-api/)
+* [Creating Rails 5 API only application following JSON:API specification](https://www.simplify.ba/articles/2016/06/18/creating-rails5-api-only-application-following-jsonapi-specification/)
 
 
 ## Author

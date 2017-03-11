@@ -42,4 +42,9 @@ Rails.application.configure do
 
   # We want to use the JSON-API specifications
   ActiveModelSerializers.config.adapter = :json_api
+
+  Rails.application.routes.default_url_options = {
+      host: 'localhost',
+      port: 3000
+  }
 end
