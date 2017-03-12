@@ -7,6 +7,7 @@ import { hasMany } from 'ember-data/relationships';
 export default Model.extend({
     firstname: attr('string'),
     lastname: attr('string'),
+    admin: attr('boolean'),
     email: attr('string'),
     description: attr('string'),
     created_at: attr('date'),
