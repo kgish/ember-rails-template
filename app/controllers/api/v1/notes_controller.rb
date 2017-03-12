@@ -42,7 +42,13 @@ module Api::V1
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_note
-        @note = Note.find(params[:id])
+        begin
+          @note = Note.find(params[:id])
+        rescue ActiveRecord::RecordNotFound
+          note = Note.new
+          note.errors.add(:id, "Wrong ID provided")
+          render_error(note, 404) and return
+        end
       end
 
       # Only allow a trusted parameter "white list" through.
