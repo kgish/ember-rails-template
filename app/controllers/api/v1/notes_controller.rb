@@ -53,7 +53,7 @@ module Api::V1
 
       # Only allow a trusted parameter "white list" through.
       def note_params
-        params.require(:note).permit(:title, :contents, :user_id)
+        params.require(:data).require(:attributes).permit(:title, :contents, :user_id)
       end
   end
 end

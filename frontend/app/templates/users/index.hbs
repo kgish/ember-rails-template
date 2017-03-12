@@ -21,6 +21,7 @@
           <td> {{user.email}} </td>
           <td> {{user.description}} </td>
           <td> {{#link-to "users.edit" user title='Edit user'}}{{fa-icon 'edit'}}{{/link-to}} </td>
+          <td> {{#link-to "users.show" user title='Show user'}}{{fa-icon 'eye'}}{{/link-to}} </td>
           <td> <a href="#" {{action "remove" user}} title="Delete user">{{fa-icon 'trash'}}</a> </td>
         </tr>
       {{/each}}
