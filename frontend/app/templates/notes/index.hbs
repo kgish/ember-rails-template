@@ -1,0 +1,31 @@
+<h1>Notes list</h1>
+
+<p> {{link-to "New Note" "notes.new" }} </p>
+
+{{#if model.length}}
+  <table class="table table-striped table-condensed table-bordered">
+    <thead>
+      <tr>
+        <th> Title </th>
+        <th> Contents </th>
+        <th> Author </th>
+        <th colspan="2"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |note|}}
+        <tr>
+          <td> {{note.title}} </td>
+          <td> {{note.contents}} </td>
+          <td> {{note.fullname}} </td>
+          <td> {{#link-to "notes.edit" note title='Edit note'}}{{fa-icon 'edit'}}{{/link-to}} </td>
+          <td> <a href="#" {{action "remove" note}} title="Delete note">{{fa-icon 'trash'}}</a> </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No notes found
+  </p>
+{{/if}}

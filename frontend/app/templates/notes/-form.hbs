@@ -1,0 +1,31 @@
+<form>
+
+    <div class="form-group row">
+        <label for="title" class="col-sm-2 col-form-label">Title:</label>
+        <div class="col-sm-10">
+            {{input value=model.title type='text' id='title' class='form-control'}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="contents" class="col-sm-2 col-form-label">Contents:</label>
+        <div class="col-sm-10">
+            {{input value=model.contents type='text' id='contents' class='form-control'}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="author" class="col-sm-2 col-form-label">Author:</label>
+        <div class="col-sm-10">
+            {{textarea value=model.user.fullname id='author' class='form-control'}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+            <button class='btn btn-success' {{action "save"}}> {{#if model.isNew}}Create{{else}}Update{{/if}} </button>
+            <button class='btn btn-default' {{action "cancel"}}> Cancel </button>
+        </div>
+    </div>
+
+</form>

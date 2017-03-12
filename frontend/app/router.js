@@ -13,6 +13,12 @@ Router.map(function() {
             path: ':user_id/edit'
         });
     });
+    this.route('notes', function() {
+        this.route('new');
+        this.route('edit', {
+            path: ':note_id/edit'
+        });
+    });
 });
 
 export default Router;

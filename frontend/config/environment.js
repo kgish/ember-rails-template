@@ -23,7 +23,7 @@ module.exports = function(environment) {
       title: 'Ember Rails Template'
     },
 
-     apiHost: 'http://localhost:3000/api',
+     apiNamespace: 'api/v1',
 
      contentSecurityPolicy: {
         'default-src': "'none'",

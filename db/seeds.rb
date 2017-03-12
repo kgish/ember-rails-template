@@ -1,5 +1,6 @@
 require 'faker'
 
+Note.delete_all
 User.delete_all
 
 User.create(
@@ -27,8 +28,8 @@ User.create(
   rand(0..5).times do
 
     note = Note.create(
-      title: Faker::Lorem.words(rand(2..5)),
-      contents: Faker::Lorem.sentences(rand(1..5)),
+      title: Faker::Lorem.sentence(rand(2..5)),
+      contents: Faker::Lorem.paragraph,
       user: user
     )
   end
