@@ -31,6 +31,13 @@
     </div>
 
     <div class="form-group row">
+        <label for="created" class="col-sm-2 col-form-label">Created:</label>
+        <div class="col-sm-10">
+            {{input value=model.created type='text' id='created' readonly='readonly' class='form-control'}}
+        </div>
+    </div>
+
+    <div class="form-group row">
         <div class="offset-sm-2 col-sm-10">
             {{#link-to 'users' class='btn btn-success'}} Back {{/link-to}}
         </div>
