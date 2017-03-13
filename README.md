@@ -229,13 +229,6 @@ $ rails g scaffold notes title:string contents:text user:references
 ```
 
 
-## Credits
-
-Special credit goes to the article [Getting Started with Rails and Ember CLI](https://spin.atomicobject.com/2017/03/06/rails-ember-cli) by Laura Robb which triggered me to create this.
-
-I was also inspired by the Tuts+ courses [Create a Full-Stack Rails and Ember App](https://code.tutsplus.com/courses/create-a-full-stack-rails-and-ember-app)
-by Gunther Mühlberger and [Build an Ambitious App with Ember 2](https://code.tutsplus.com/courses/build-an-ambitious-app-with-ember-2)
-
 ## References
 
 Here are a number of links that you might find useful.
@@ -253,6 +246,16 @@ Some good articles about implementing the JSON:API can be found here:
 
 * [How and why should you use JSON API in your Rails API?](http://blog.arkency.com/2016/02/how-and-why-should-you-use-json-api-in-your-rails-api/)
 * [Creating Rails 5 API only application following JSON:API specification](https://www.simplify.ba/articles/2016/06/18/creating-rails5-api-only-application-following-jsonapi-specification/)
+
+Some excellent Tuts+ courses:
+
+* [Create a Full-Stack Rails and Ember App](https://code.tutsplus.com/courses/create-a-full-stack-rails-and-ember-app)
+by Gunther Mühlberger
+* [Build an Ambitious App with Ember 2](https://code.tutsplus.com/courses/build-an-ambitious-app-with-ember-2)
+
+Special credit goes to the following article which inspired me:
+
+* [Getting Started with Rails and Ember CLI](https://spin.atomicobject.com/2017/03/06/rails-ember-cli) by Laura Robb
 
 
 ## Author
