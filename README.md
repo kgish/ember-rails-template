@@ -69,12 +69,13 @@ $ rails generate ember:init
 $ cd frontend
 ```
 
-Install Sass, Bootstrap and Font Awesome.
+Install Sass, Bootstrap, Font Awesome and Moment:
 
 ```
 $ ember install ember-cli-sass
 $ bower install bootstrap#4.0.0-alpha.6 --save
 $ bower install fontawesome --save
+$ bower install moment --save
 ```
 
 Convert the default Ember stylesheet CSS to SASS:
@@ -95,7 +96,7 @@ Add the following lines to the `ember-cli-build.js` file:
 ```
 app.import('bower_components/tether/dist/js/tether.min.js');
 app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
-
+app.import('bower_components/moment/min/moment.min.js');
 ```
 
 IMPORTANT: make sure that `tether` import goes BEFORE the `bootstrap` import.
