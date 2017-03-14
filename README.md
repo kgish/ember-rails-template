@@ -229,6 +229,7 @@ Notes:
 $ rails g scaffold notes title:string contents:text user:references
 ```
 
+## Error handling
 
 ## Pagination
 
