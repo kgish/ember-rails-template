@@ -229,6 +229,23 @@ $ rails g scaffold notes title:string contents:text user:references
 ```
 
 
+## Making the API safe
+
+### Brute force attacks
+
+In order to protect the API from brute force attacks, use the `Rack::Attack` gem.
+
+```
+gem 'rack-attack'
+```
+
+The following file also need to be changed.
+
+* config/application.rb
+* config/initializers/rack_attack.rb
+
+### Authentication
+
 ## References
 
 Here are a number of links that you might find useful.
@@ -241,6 +258,7 @@ Here are a number of links that you might find useful.
 * [Bootstrap v4 alpha](https://v4-alpha.getbootstrap.com/)
 * [Font awesome](http://fontawesome.io/icons/)
 * [Ember-cli-rails](https://github.com/thoughtbot/ember-cli-rails)
+* [Rack::Attack](https://github.com/kickstarter/rack-attack)
 
 Some good articles about implementing the JSON:API can be found here:
 
