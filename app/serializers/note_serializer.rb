@@ -1,5 +1,7 @@
 class NoteSerializer < ActiveModel::Serializer
   attributes :id, :title, :contents, :created_at, :updated_at
 
-  has_one :user_id
+  belongs_to :user
+
+  # link(:self) { note_url(object) }
 end

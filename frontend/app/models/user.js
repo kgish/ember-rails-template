@@ -13,8 +13,8 @@ export default Model.extend({
     created_at: attr('date'),
     notes: hasMany('note'),
 
-    fullName: Ember.computed('firstName', 'lastName', function() {
-        return `${this.get('firstName')} ${this.get('lastName')}`;
+    fullname: Ember.computed('firstname', 'lastname', function() {
+        return `${this.get('firstname')} ${this.get('lastname')}`;
     }),
 
     created: Ember.computed('created_at', function() {
