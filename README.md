@@ -230,6 +230,8 @@ $ rails g scaffold notes title:string contents:text user:references
 ```
 
 
+## Pagination
+
 ## Making the API safe
 
 ### Brute force attacks
