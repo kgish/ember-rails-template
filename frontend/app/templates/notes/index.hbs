@@ -7,8 +7,6 @@
     <thead>
       <tr>
         <th> Title </th>
-        <th> Contents </th>
-        <th> Author </th>
         <th colspan="3"> </th>
       </tr>
     </thead>
@@ -16,8 +14,6 @@
       {{#each model as |note|}}
         <tr>
           <td> {{note.title}} </td>
-          <td> {{note.contents}} </td>
-          <td> {{note.fullname}} </td>
           <td> {{#link-to "notes.edit" note title='Edit note'}}{{fa-icon 'edit'}}{{/link-to}} </td>
           <td> {{#link-to "notes.show" note title='Show note'}}{{fa-icon 'eye'}}{{/link-to}} </td>
           <td> <a href="#" {{action "remove" note}} title="Delete note">{{fa-icon 'trash'}}</a> </td>
