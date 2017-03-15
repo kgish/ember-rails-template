@@ -17,15 +17,10 @@
     <div class="form-group row">
         <label for="admin" class="col-sm-2 col-form-label">Admin:</label>
         <div class="col-sm-10">
-            <select id="admin" class="form-control">
-                {{#if model.admin}}
-                    <option selected>Yes</option>
-                    <option>No</option>
-                {{else}}
-                    <option>Yes</option>
-                    <option selected>No</option>
-                {{/if}}
-            </select>
+            {{#x-select value=model.admin class="custom-select" action="selectAdmin" as |xs|}}
+                {{#xs.option value=true}}Yes{{/xs.option}}
+                {{#xs.option value=false}}No{{/xs.option}}
+            {{/x-select}}
         </div>
     </div>
 

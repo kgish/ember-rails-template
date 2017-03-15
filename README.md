@@ -73,6 +73,7 @@ Install Sass, Bootstrap, Font Awesome and Moment:
 
 ```
 $ ember install ember-cli-sass
+$ ember install emberx-select
 $ bower install bootstrap#4.0.0-alpha.6 --save
 $ bower install fontawesome --save
 $ bower install moment --save

@@ -12,6 +12,10 @@ export default Ember.Controller.extend({
         cancel() {
             this.get('model').deleteRecord();
             return true;
+        },
+
+        selectAdmin(admin) {
+            console.log('Selected admin='+admin)
         }
     }
 });

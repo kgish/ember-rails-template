@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+    users: [],
+
     actions: {
         save() {
             this.get('model').save().then(
