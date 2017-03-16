@@ -1,14 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-    users: [],
-
     actions: {
         save() {
             this.get('model').save().then(
                 () => this.transitionToRoute('notes'),
-                () => console.error('Cannot create note')
+                (adapterError) => console.error('Cannot save note, errors=' + JSON.stringify(adapterError.errors))
             );
+        },
+
+        selectUser(user) {
+            console.log(user);
         },
 
         cancel() {

@@ -9,7 +9,7 @@ export default Model.extend({
     contents: attr('string'),
     created_at: attr('date'),
     updated_at: attr('date'),
-    user: belongsTo('user'),
+    user: belongsTo('user', {async: true}),
 
     created: Ember.computed('created_at', function() {
         return moment(this.get('created_at')).format('ll');

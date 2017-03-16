@@ -2,45 +2,40 @@ module Api::V1
   class NotesController < ApiController
     before_action :set_note, only: [:show, :update, :destroy]
 
-    # GET /notes
     def index
-      @notes = Note.all
+      notes = Note.all
 
-      render json: @notes
+      render json: notes
     end
 
-    # GET /notes/1
     def show
       render json: @note
     end
 
-    # POST /notes
     def create
-      @note = Note.new(note_params)
+      note = Note.new(note_params)
 
-      if @note.save
-        render json: @note, status: :created, location: @note
+      if note.save
+        render json: note, status: :created, location: note
       else
-        render json: @note.errors, status: :unprocessable_entity
+        render_error(note, :unprocessable_entity)
       end
     end
 
-    # PATCH/PUT /notes/1
     def update
-      if @note.update(note_params)
-        render json: @note
+      if @note.update_attributes(note_params)
+        render json: @note, status: :ok
       else
-        render json: @note.errors, status: :unprocessable_entity
+        render_error(@note, :unprocessable_entity)
       end
     end
 
-    # DELETE /notes/1
     def destroy
       @note.destroy
+      head 204
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
       def set_note
         begin
           @note = Note.find(params[:id])
@@ -51,9 +46,8 @@ module Api::V1
         end
       end
 
-      # Only allow a trusted parameter "white list" through.
       def note_params
-        params.require(:data).require(:attributes).permit(:title, :contents, :user_id)
+         ActiveModelSerializers::Deserialization.jsonapi_parse(params)
       end
   end
 end

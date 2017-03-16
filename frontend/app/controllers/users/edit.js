@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
         save() {
             this.get('model').save().then(
                 () => this.transitionToRoute('users'),
-                () => console.error('Cannot save user')
+                (adapterError) => console.error('Cannot save user, errors=' + JSON.stringify(adapterError.errors))
             );
         },
 
@@ -17,7 +17,8 @@ export default Ember.Controller.extend({
         },
 
         selectAdmin(admin) {
-            console.log('Selected admin='+admin)
+            let model = this.get('model');
+            model.set('admin', admin);
         }
      }
 });

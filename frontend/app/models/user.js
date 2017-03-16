@@ -11,7 +11,7 @@ export default Model.extend({
     email: attr('string'),
     description: attr('string'),
     created_at: attr('date'),
-    notes: hasMany('note'),
+    notes: hasMany('note', {async: true}),
 
     fullname: Ember.computed('firstname', 'lastname', function() {
         return `${this.get('firstname')} ${this.get('lastname')}`;
