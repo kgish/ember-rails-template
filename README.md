@@ -26,7 +26,7 @@ Enable CORS and add the following lines to the `Gemfile`:
 gem 'rack-cors'
 
 gem 'ember-cli-rails'
-gem 'active_model_serializers',
+gem 'active_model_serializers'
 ```
 
 Install it all:
