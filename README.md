@@ -33,7 +33,7 @@ Install it all:
 
 ```
 $ bundle install
-$ rails db:create
+$ bundle exec rails db:create
 ```
 
 Change the origin and resource settings in the `config/initializers/cors.rb` to look like this:
@@ -54,7 +54,7 @@ Create and setup the ember front-end as follows, make sure that you are in the R
 
 ```
 $ ember new frontend —skip-git
-$ rails generate ember:init
+$ bundle exec rails generate ember:init
 $ cd frontend
 $ ember install ember-cli-rails-addon
 ```
@@ -139,7 +139,7 @@ module.exports = function(environment) {
 Now you're all set to go. Start the server:
 
 ```
-$ bin/rails server
+$ bundle exec rails server
 ```
 
 Then cross your fingers and point your favorite browser to [http://localhost:3000](http://localhost:3000). Voilà, mon ami.
