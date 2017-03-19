@@ -9,7 +9,7 @@ I've also extended the template to use [Sass](http://sass-lang.com/) and [Bootst
 
 ## Installation
 
-The steps needed for a successful installation are easy, just follow these instructions.
+The steps needed for a successful installation are easy, just follow these instructions closely. It is very important that you proceed exactly in the order given, otherwise you will run into unexpected problems.
 
 ### Rails API back-end
 
@@ -50,6 +50,15 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 end
 ```
 
+Create and setup the ember front-end as follows, make sure that you are in the Rails route directory.
+
+```
+$ ember new frontend —skip-git
+$ rails generate ember:init
+$ cd frontend
+$ ember install ember-cli-rails-addon
+```
+
 Finally, modify the `ember-rails-template/config/routes.rb` file to look like this:
 
 ```ruby
@@ -61,17 +70,10 @@ end
 
 ### Ember front-end
 
-Create and setup the ember front-end as follows.
+Enter the `frontend` directory and install Sass, Bootstrap and Font Awesome.
 
 ```
-$ ember new frontend —skip-git
-$ rails generate ember:init
 $ cd frontend
-```
-
-Install Sass, Bootstrap and Font Awesome.
-
-```
 $ ember install ember-cli-sass
 $ bower install bootstrap#4.0.0-alpha.6 --save
 $ bower install fontawesome --save
