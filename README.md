@@ -1,6 +1,10 @@
-# Ember-rails template
+# Going the Extra Mile with Ember, Rails, JSON API and friends
 
-This is a bare-bones template that you can use as a starting point for building your impressive ember-rails applications.
+This is a bare-bones template that you can use as a starting point for building your very own impressive ember-rails applications.
+
+It goes well beyond the plain-vanilla templates which I've found in articles, which though very informative and useful to a degree, never go further than the basics.
+
+Also included as part of the deal are concepts like error handling, pagination, CORS, authentication, securty and data relationships (the trickiest of all).
 
 Using this approach as a generic basis, you can easily combine the power of the Rails backend with the flexibility of an Ember client interface.
 
