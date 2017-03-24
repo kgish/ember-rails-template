@@ -75,8 +75,8 @@ Enter the `frontend` directory and install Sass, Bootstrap and Font Awesome.
 ```
 $ cd frontend
 $ ember install ember-cli-sass
+$ ember install ember-font-awesome
 $ bower install bootstrap#4.0.0-alpha.6 --save
-$ bower install fontawesome --save
 ```
 
 Convert the default Ember stylesheet CSS to SASS:
@@ -85,11 +85,10 @@ Convert the default Ember stylesheet CSS to SASS:
 $ mv app/styles/app.css app/styles/app.scss
 ```
 
-Include bootstrap and fontawesome in the `frontend/app/styles/app.scss` file:
+Include bootstrap in the `frontend/app/styles/app.scss` file:
 
 ```scss
 @import "../../bower_components/bootstrap/scss/bootstrap";
-@import "../../bower_components/font-awesome/scss/font-awesome";
 
 html,
 body {
@@ -174,6 +173,8 @@ $ npm uninstall ember-welcome-page --save-dev
 and then modify the `templates/application.hbs` file by removing `{{welcome-page}}` and embellishing it with your own idiosyncrasies.
 
 ```
+{{partial 'shared/navbar'}}
+
 <div class="container">
 
     <div class="main-wrapper">
@@ -184,11 +185,14 @@ and then modify the `templates/application.hbs` file by removing `{{welcome-page
 
         {{outlet}}
 
+        {{partial 'shared/footer'}}
+
     </div>
 
 </div>
 ```
 
+where the `navbar` and `footer` partials can be found in the `templates/shared` directory.
 
 ## Credits
 
