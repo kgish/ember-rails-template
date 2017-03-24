@@ -17,9 +17,9 @@
     <div class="form-group row">
         <label for="author" class="col-sm-2 col-form-label">Author:</label>
         <div class="col-sm-10">
-            {{#x-select value=model.user class="custom-select" action="selectUser" as |xs|}}
-                {{#each users as |u|}}
-                    {{#xs.option value=u}}{{u.fullname}}{{/xs.option}}
+            {{#x-select value=currentUser class="custom-select" action="selectUser" as |xs|}}
+                {{#each users as |user|}}
+                    {{#xs.option value=user}}{{user.fullname}}{{/xs.option}}
                 {{/each}}
             {{/x-select}}
         </div>

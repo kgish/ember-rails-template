@@ -68,7 +68,7 @@ end
 Create and setup the ember front-end as follows.
 
 ```
-$ ember new frontend —skip-git
+$ ember new frontend
 $ rails generate ember:init
 $ cd frontend
 ```
