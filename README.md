@@ -85,11 +85,29 @@ Convert the default Ember stylesheet CSS to SASS:
 $ mv app/styles/app.css app/styles/app.scss
 ```
 
-Include bootstrap and fontawesome in the `app.scss` file:
+Include bootstrap and fontawesome in the `frontend/app/styles/app.scss` file:
 
 ```scss
 @import "../../bower_components/bootstrap/scss/bootstrap";
 @import "../../bower_components/font-awesome/scss/font-awesome";
+
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+  background: #ddd;
+  padding-top: 5rem;
+}
+
+.main-wrapper {
+  background: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35)
+}
+
 ```
 
 Add the following lines to the `ember-cli-build.js` file:
