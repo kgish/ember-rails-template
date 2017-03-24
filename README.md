@@ -53,7 +53,7 @@ end
 Create and setup the ember front-end as follows, make sure that you are in the Rails route directory.
 
 ```
-$ ember new frontend —skip-git
+$ ember new frontend
 $ bundle exec rails generate ember:init
 $ cd frontend
 $ ember install ember-cli-rails-addon
