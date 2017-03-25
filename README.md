@@ -175,6 +175,15 @@ and then modify the `templates/application.hbs` file by removing `{{welcome-page
 </div>
 ```
 
+You will also probably want to remove the `mirage addon` stuff:
+
+```
+```
+$ npm uninstall ember-cli-mirage --save-dev
+$ rm -rf mirage
+
+```
+
 ## JSON-API
 
 ```
