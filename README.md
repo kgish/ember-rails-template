@@ -63,6 +63,20 @@ end
 
 ```
 
+Special gems:
+
+```
+group :development, :test do
+  gem 'byebug', platform: :mri
+  gem 'pry-rails'
+  gem "awesome_print", require:"ap"
+  gem 'meta_request'
+  gem "better_errors"
+  gem 'bullet'
+end
+
+```
+
 ### Ember front-end
 
 Create and setup the ember front-end as follows.
