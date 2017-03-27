@@ -65,6 +65,8 @@ end
 
 Special gems:
 
+http://www.rubyonrails365.com/7-must-have-gems-to-install-on-any-project/
+
 ```
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -294,8 +296,9 @@ Here are a number of links that you might find useful.
 
 Some good articles about implementing the JSON:API can be found here:
 
-* [How and why should you use JSON API in your Rails API?](http://blog.arkency.com/2016/02/how-and-why-should-you-use-json-api-in-your-rails-api/)
-* [Creating Rails 5 API only application following JSON:API specification](https://www.simplify.ba/articles/2016/06/18/creating-rails5-api-only-application-following-jsonapi-specification/)
+* [How and why should you use JSON API in your Rails API?](http://blog.arkency.com/2016/02/how-and-why-should-you-use-json-api-in-your-rails-api)
+* [Creating Rails 5 API only application following JSON:API specification](https://www.simplify.ba/articles/2016/06/18/creating-rails5-api-only-application-following-jsonapi-specification)
+* [7 must have Development Gems to install on every project](http://www.rubyonrails365.com/7-must-have-gems-to-install-on-any-project)
 
 Some excellent Tuts+ courses:
 
