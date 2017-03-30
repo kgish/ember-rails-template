@@ -1,19 +1,17 @@
 import Ember from 'ember';
-import RSVP from 'rsvp';
 
 export default Ember.Route.extend({
     model(params) {
-        return RSVP.hash({
-            note: this.store.findRecord('note', params.note_id),
-            users: this.store.findAll('user'),
-        });
+        return this.store.findRecord('note', params.note_id)
     },
 
-    setupController(controller, models) {
-        this._super(controller, models.note);
-        controller.setProperties({
-            users: models.users
-        });
+    setupController(controller, model) {
+        this._super(controller, model);
+        let user_id = model.get('user.id');
+        this.store.findAll('user').then(
+            users => this.controller.setProperties({users: users, currentUser: users.findBy('id', user_id)}),
+            error => console.error(error)
+        );
     },
 
     actions: {

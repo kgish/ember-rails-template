@@ -2,14 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
+    // See routes/notes/edit.js:setupController()
     users: null,
     currentUser: null,
 
     actions: {
-
-        activate() {
-            console.log('activate');
-        },
 
         save() {
             this.get('model').save().then(
