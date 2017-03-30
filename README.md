@@ -13,7 +13,7 @@ I've also extended the template to use [Sass](http://sass-lang.com/) and [Bootst
 
 ## Installation
 
-The steps needed for a successful installation are easy, just follow these instructions.
+The steps needed for a successful installation are easy, just follow these instructions closely. It is very important that you proceed exactly in the order given, otherwise you will run into unexpected problems.
 
 ### Rails API back-end
 
@@ -37,7 +37,7 @@ Install it all:
 
 ```
 $ bundle install
-$ rails db:create
+$ bundle exec rails db:create
 ```
 
 Change the origin and resource settings in the `config/initializers/cors.rb` to look like this:
@@ -52,6 +52,15 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
+```
+
+Create and setup the ember front-end as follows, make sure that you are in the Rails route directory.
+
+```
+$ ember new frontend --ignore-git
+$ bundle exec rails generate ember:init
+$ cd frontend
+$ ember install ember-cli-rails-addon
 ```
 
 Finally, modify the `ember-rails-template/config/routes.rb` file to look like this:
@@ -81,17 +90,16 @@ end
 
 ### Ember front-end
 
-Create and setup the ember front-end as follows.
-
 ```
 $ ember new frontend
 $ rails generate ember:init
 $ cd frontend
 ```
 
-Install Sass, Bootstrap, Font Awesome and Moment:
+Enter the `frontend` directory and install Sass, Bootstrap, etc.
 
 ```
+$ cd frontend
 $ ember install ember-cli-sass
 $ ember install emberx-select
 $ bower install bootstrap#4.0.0-alpha.6 --save
@@ -105,11 +113,28 @@ Convert the default Ember stylesheet CSS to SASS:
 $ mv app/styles/app.css app/styles/app.scss
 ```
 
-Include bootstrap and fontawesome in the `app.scss` file:
+Include bootstrap in the `frontend/app/styles/app.scss` file:
 
 ```scss
 @import "../../bower_components/bootstrap/scss/bootstrap";
-@import "../../bower_components/font-awesome/scss/font-awesome";
+
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+  background: #ddd;
+  padding-top: 5rem;
+}
+
+.main-wrapper {
+  background: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35)
+}
+
 ```
 
 Add the following lines to the `ember-cli-build.js` file:
@@ -159,7 +184,7 @@ module.exports = function(environment) {
 Now you're all set to go, simply fire up the server by executing the following command:
 
 ```
-$ bin/rails server
+$ bundle exec rails server
 ```
 
 Then cross your fingers and point your favorite browser to [http://localhost:3000](http://localhost:3000). Voilà, mon ami.
@@ -176,6 +201,8 @@ $ npm uninstall ember-welcome-page --save-dev
 and then modify the `templates/application.hbs` file by removing `{{welcome-page}}` and embellishing it with your own idiosyncrasies.
 
 ```
+{{partial 'shared/navbar'}}
+
 <div class="container">
 
     <div class="main-wrapper">
@@ -186,18 +213,20 @@ and then modify the `templates/application.hbs` file by removing `{{welcome-page
 
         {{outlet}}
 
+        {{partial 'shared/footer'}}
+
     </div>
 
 </div>
 ```
 
+where the `navbar` and `footer` partials can be found in the `templates/shared` directory.
+
 You will also probably want to remove the `mirage addon` stuff:
 
 ```
-```
 $ npm uninstall ember-cli-mirage --save-dev
 $ rm -rf mirage
-
 ```
 
 ## JSON-API
@@ -272,7 +301,6 @@ In order to protect the API from brute force attacks, use the `Rack::Attack` gem
 ```
 gem 'rack-attack'
 ```
-
 The following file also need to be changed.
 
 * config/application.rb
