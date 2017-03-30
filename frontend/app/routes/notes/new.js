@@ -4,8 +4,8 @@ import RSVP from 'rsvp';
 export default Ember.Route.extend({
     model() {
         return RSVP.hash({
-            note: this.get('store').createRecord('note'),
-            users: this.get('store').findAll('user')
+            note: this.store.createRecord('note'),
+            users: this.store.findAll('user')
         });
     },
 
