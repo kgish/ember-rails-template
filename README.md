@@ -96,12 +96,18 @@ $ rails generate ember:init
 $ cd frontend
 ```
 
-Enter the `frontend` directory and install Sass, Bootstrap, etc.
+Enter the `frontend` directory and install some usefull ember addons:
 
 ```
 $ cd frontend
 $ ember install ember-cli-sass
 $ ember install emberx-select
+$ ember install ember-truth-helpers
+```
+
+Install Sass, Bootstrap and Moment using bower:
+
+```
 $ bower install bootstrap#4.0.0-alpha.6 --save
 $ bower install fontawesome --save
 $ bower install moment --save
