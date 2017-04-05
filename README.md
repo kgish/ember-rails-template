@@ -59,6 +59,16 @@ $ npm install
 $ bower install
 ```
 
+You are now ready to launch the application:
+
+```
+$ cd ..
+$ bundle exec rails server
+
+```
+
+Point your favorite browser at [http://localhost:3000](http://localhost:3000), cross your fingers and hope to die, and you should see the homepage of the screenshot above.
+
 
 ## Installation from scratch
 
