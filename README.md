@@ -10,8 +10,57 @@ Using this approach as a generic basis, you can easily combine the power of the 
 
 I've also extended the template to use [Sass](http://sass-lang.com/) and [Bootstrap v4 alpha](https://v4-alpha.getbootstrap.com/), but this can be left out if you prefer.
 
+![Screenshot of the homepage](images/screenshot-homepage.png)
 
-## Installation
+
+## Installation from Github
+
+This is the quick and easy way to get things running, meaning that you'll have an app which you can study and play around with.
+
+However, if you really want to learn the details and understand how things work under the hood, the you should skip this section and proceed with the next one.
+
+You will need to have the following tools installed:
+* git
+* ruby
+* bundler
+* ember-cli
+* node
+* npm
+* bower
+
+Assuming that you already have the above installed, here are the steps you need to follow.
+
+Clone the repository to a local directory of your choice:
+
+```
+$ $ git clone https://github.com/kgish/ember-rails-template.git
+$ cd ember-rails-template
+```
+
+Setup the Rails stuff:
+
+```
+$ bundle install
+```
+
+Initialize the database and populate it with some dummy data:
+
+```
+$ rails db:create
+$ rails db:migrate
+$ rails db:seed
+```
+
+Setup the Ember stuff:
+
+```
+$ cd frontend
+$ npm install
+$ bower install
+```
+
+
+## Installation from scratch
 
 The steps needed for a successful installation are easy, just follow these instructions closely. It is very important that you proceed exactly in the order given, otherwise you will run into unexpected problems.
 
@@ -38,6 +87,14 @@ Install it all:
 ```
 $ bundle install
 $ bundle exec rails db:create
+```
+
+Initialize the database and populate it with some dummy data:
+
+```
+$ rails db:create
+$ rails db:migrate
+$ rails db:seed
 ```
 
 Change the origin and resource settings in the `config/initializers/cors.rb` to look like this:
@@ -320,6 +377,8 @@ $ rails g scaffold notes title:string contents:text user:references
 ## Error handling
 
 ## Pagination
+
+## Authentication
 
 ## Making the API safe
 
