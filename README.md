@@ -123,6 +123,7 @@ Include bootstrap in the `frontend/app/styles/app.scss` file:
 
 ```scss
 @import "../../bower_components/bootstrap/scss/bootstrap";
+@import "responsive";
 
 html,
 body {
@@ -142,6 +143,28 @@ body {
 }
 
 ```
+
+
+The media queries can all be put in a separate `responsive.scss` file:
+
+```scss
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) { }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) { }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) { }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) { }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) { }
+
+```
+
 
 Add the following lines to the `ember-cli-build.js` file:
 
