@@ -46,9 +46,9 @@ $ bundle install
 Initialize the database and populate it with some dummy data:
 
 ```
-$ rails db:create
-$ rails db:migrate
-$ rails db:seed
+$ bundle exec rails db:create
+$ bundle exec rails db:migrate
+$ bundle exec rails db:seed
 ```
 
 Setup the Ember stuff:
@@ -59,12 +59,11 @@ $ npm install
 $ bower install
 ```
 
-You are now ready to launch the application:
+You are now ready to return to the project root directory and launch the application:
 
 ```
 $ cd ..
 $ bundle exec rails server
-
 ```
 
 Point your favorite browser at [http://localhost:3000](http://localhost:3000), cross your fingers and hope to die, and you should see the homepage of the screenshot above.
