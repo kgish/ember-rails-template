@@ -416,7 +416,7 @@ gem 'ember-cli-rails'
 
 To configure your EmberCLI-Rails applications for Heroku:
 
-1. Execute rails generate ember:herokun.
+1. Execute rails generate ember:heroku.
 2. Commit the newly generated files.
 3. Add the NodeJS buildpack and configure NPM to include the bower dependency's executable file.
 
