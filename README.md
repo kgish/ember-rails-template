@@ -33,7 +33,7 @@ Assuming that you already have the above installed, here are the steps you need 
 Clone the repository to a local directory of your choice:
 
 ```
-$ $ git clone https://github.com/kgish/ember-rails-template.git
+$ git clone https://github.com/kgish/ember-rails-template.git
 $ cd ember-rails-template
 ```
 
