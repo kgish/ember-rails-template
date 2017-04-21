@@ -481,4 +481,4 @@ Kiffin Gish \< kiffin.gish@planet.nl \>
 [Gishtech](http://gishtech.com)  
 Advanced Software Development for the Web
 
-\- You're never too old to learn new stuff.
+"You're never too old to learn new stuff..."
