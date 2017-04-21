@@ -478,7 +478,7 @@ Special credit goes to the following article which inspired me:
 
 Kiffin Gish \< kiffin.gish@planet.nl \>
 
-[Gishtech](http://gishtech.com)
+[Gishtech](http://gishtech.com)  
 Advanced Software Development for the Web
 
 \- You're never too old to learn new stuff.
