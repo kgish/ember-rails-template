@@ -86,10 +86,11 @@ Enable CORS and add the following lines to the `Gemfile`:
 
 ```
 gem 'rack-cors'
-
-gem 'ember-cli-rails'
+gem 'ember-cli-rails', '~> 0.8.0'
 gem 'active_model_serializers', '~> 0.10.0'
 ```
+
+IMPORTANT: The `ember-cli-rails` gems's MAJOR and MINOR version must match the (below) `ember-cli-rails` addon's MAJOR and MINOR versions, in this case `0.8.0`.
 
 Install it all:
 
@@ -127,6 +128,18 @@ $ ember new frontend --ignore-git
 $ bundle exec rails generate ember:init
 $ cd frontend
 $ ember install ember-cli-rails-addon
+```
+
+IMPORTANT: The `ember-cli-rails` addon's MAJOR and MINOR version must match the (above) `ember-cli-rails` gem's MAJOR and MINOR versions, in this case `0.8.0`.
+
+Looking in the `frontend/package.json` file:
+
+```
+"devDependencies" : {
+    ...
+    "ember-cli-rails-addon": "0.8.0",
+    ...
+}
 ```
 
 Finally, modify the `ember-rails-template/config/routes.rb` file to look like this:
