@@ -428,7 +428,14 @@ Add the NodeJS buildpack and configure NPM to include the bower dependency's exe
 $ heroku buildpacks:clear
 $ heroku buildpacks:add --index 1 heroku/nodejs
 $ heroku buildpacks:add --index 2 heroku/ruby
+$ heroku config:set NPM_CONFIG_PRODUCTION=false
 $ heroku config:unset SKIP_EMBER
+```
+
+Remove the following line from the `Gemfile`:
+
+```
+gem 'rails_12factor', group: [:staging, :production]
 ```
 
 You are ready to deploy:
