@@ -476,6 +476,7 @@ Here are a number of links that you might find useful.
 * [Font awesome](http://fontawesome.io/icons/)
 * [Ember-cli-rails](https://github.com/thoughtbot/ember-cli-rails)
 * [Rack::Attack](https://github.com/kickstarter/rack-attack)
+* [A Rail's Developers Intro to Ember](https://www.youtube.com/watch?v=fjvNUG_0cjw)
 
 Some good articles about implementing the JSON:API can be found here:
 
